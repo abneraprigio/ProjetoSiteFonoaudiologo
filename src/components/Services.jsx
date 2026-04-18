@@ -8,6 +8,7 @@ const services = [
     desc: 'Estimulando o desenvolvimento com ludicidade e carinho. Foco em atrasos de fala, leitura e escrita.',
     icon: <Baby size={32} />,
     color: 'bg-blue-500/10 text-blue-600',
+    image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=1972',
     id: 'infantil'
   },
   {
@@ -15,6 +16,7 @@ const services = [
     desc: 'Aperfeiçoamento e saúde vocal para quem usa a voz como ferramenta: professores, cantores e palestrantes.',
     icon: <Mic size={32} />,
     color: 'bg-indigo-500/10 text-indigo-600',
+    image: 'https://images.unsplash.com/photo-1551712702-4b7335dd8706?auto=format&fit=crop&q=80&w=2070',
     id: 'voz'
   },
   {
@@ -22,6 +24,7 @@ const services = [
     desc: 'Tecnologia e acompanhamento especializado para reconectar você ao mundo dos sons com qualidade.',
     icon: <Ear size={32} />,
     color: 'bg-sky-500/10 text-sky-600',
+    image: 'https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&q=80&w=1974',
     id: 'auditivo'
   }
 ];
@@ -52,19 +55,29 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: idx * 0.1 }}
-              className="glass-card p-10 group"
+              className="glass-card overflow-hidden group flex flex-col h-full"
             >
-              <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-8 shadow-inner transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3`}>
-                {service.icon}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-brand-secondary/20" />
+                <div className={`absolute top-4 left-4 w-12 h-12 rounded-xl ${service.color} flex items-center justify-center shadow-lg backdrop-blur-md`}>
+                  {service.icon}
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-brand-secondary mb-4">{service.title}</h3>
-              <p className="text-clinical-muted leading-relaxed mb-8">
-                {service.desc}
-              </p>
-              <button className="flex items-center gap-2 text-brand-primary font-bold group-hover:gap-3 transition-all">
-                <span>Saiba mais</span>
-                <ArrowRight size={18} />
-              </button>
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold text-brand-secondary mb-4">{service.title}</h3>
+                <p className="text-clinical-muted leading-relaxed mb-8 flex-grow">
+                  {service.desc}
+                </p>
+                <button className="flex items-center gap-2 text-brand-primary font-bold group-hover:gap-3 transition-all">
+                  <span>Saiba mais</span>
+                  <ArrowRight size={18} />
+                </button>
+              </div>
             </motion.div>
           ))}
         </div>

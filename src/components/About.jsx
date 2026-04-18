@@ -14,15 +14,14 @@ const About = () => {
             viewport={{ once: true, amount: 0.2 }}
           >
             <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white">
-              {/* Using a high-end placeholder design since we don't have the photo yet */}
-              <div className="aspect-[4/5] bg-gradient-to-br from-brand-accent to-brand-primary/30 flex items-center justify-center p-12">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-clinical-white/80 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <Heart className="text-brand-primary" size={48} fill="currentColor" />
-                  </div>
-                  <p className="text-brand-secondary font-bold text-xl italic underline decoration-brand-accent underline-offset-4">Dra. Eliana Silva</p>
-                  <p className="text-clinical-muted text-sm mt-2">Fonoaudióloga | CRFa 0000</p>
-                </div>
+              <img 
+                src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=1974" 
+                alt="Dra. Eliana Silva" 
+                className="w-full h-full object-cover aspect-[4/5]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-brand-secondary to-transparent">
+                <p className="text-white font-bold text-2xl">Dra. Eliana Silva</p>
+                <p className="text-white/80 text-sm">Fonoaudióloga | CRFa 0000</p>
               </div>
             </div>
             {/* Decorative elements */}

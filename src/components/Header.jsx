@@ -27,10 +27,10 @@ const Header = () => {
         <nav className={`glass px-6 py-4 rounded-3xl flex items-center justify-between transition-all duration-500 ${isScrolled ? 'shadow-2xl' : 'shadow-lg'}`}>
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-white shadow-lg">
-              <span className="text-xl font-bold italic underline-offset-4 decoration-2">F</span>
+              <span className="text-xl font-bold italic underline-offset-4 decoration-2">V</span>
             </div>
             <span className="text-xl font-bold tracking-tight text-brand-secondary">
-              Fono<span className="text-brand-primary">Clínica</span>
+              Voz<span className="text-brand-primary">&Vida</span>
             </span>
           </div>
 
