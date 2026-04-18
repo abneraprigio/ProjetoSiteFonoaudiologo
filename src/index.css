@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Outfit", "Inter", system-ui, sans-serif;
+
+  --color-brand-primary: #0ea5e9;
+  --color-brand-secondary: #0369a1;
+  --color-brand-soft: #f0f9ff;
+  --color-brand-accent: #e0f2fe;
+  
+  --color-clinical-white: #ffffff;
+  --color-clinical-text: #1e293b;
+  --color-clinical-muted: #64748b;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-soft);
+    color: var(--color-clinical-text);
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+}
+
+@utility glass {
+  @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl;
+}
+
+@utility glass-card {
+  @apply bg-white/60 backdrop-blur-md border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] rounded-3xl transition-all duration-500 hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] hover:-translate-y-1;
+}
+
+@utility btn-primary {
+  @apply bg-brand-primary text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 hover:bg-brand-secondary hover:scale-[1.02] shadow-lg active:scale-[0.98] flex items-center justify-center gap-2;
+}
+
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-secondary to-brand-primary;
+}
