@@ -33,10 +33,10 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-white shadow-lg">
-                <span className="text-xl font-bold italic">F</span>
+                <span className="text-xl font-bold italic">V</span>
               </div>
               <span className="text-xl font-bold tracking-tight">
-                Fono<span className="text-brand-primary">Clínica</span>
+                Voz<span className="text-brand-primary">&Vida</span>
               </span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-8">

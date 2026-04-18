@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageCircle, Star } from 'lucide-react';
+import { ArrowRight, MessageCircle, Star, Heart } from 'lucide-react';
 
 const Hero = () => {
   return (
